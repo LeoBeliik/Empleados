@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="605.0" styleClass="panel" stylesheets="@../css/Main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="data.CMain">
+    <left>
+        <VBox alignment="TOP_CENTER" prefWidth="150.0" styleClass="vbox" stylesheets="@../css/Main.css"
+              BorderPane.alignment="TOP_CENTER">
+            <Button fx:id="btnMainDep" minHeight="-Infinity" mnemonicParsing="false" onAction="#ADep" prefHeight="50.0"
+                    prefWidth="150.0" text="Departamentos" textFill="#d3d3d3">
+                <VBox.margin>
+                    <Insets right="5.0" top="20.0"/>
+                </VBox.margin>
+                <font>
+                    <Font size="16.0"/>
+                </font>
+                <cursor>
+                    <Cursor fx:constant="DEFAULT"/>
+                </cursor>
+            </Button>
+            <Button fx:id="btnMainEmp" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" mnemonicParsing="false"
+                    onAction="#AEmp" prefHeight="50.0" prefWidth="200.0" text="Empleados" textAlignment="CENTER"
+                    textFill="#d3d3d3">
+                <VBox.margin>
+                    <Insets bottom="10.0" right="5.0" top="15.0"/>
+                </VBox.margin>
+                <font>
+                    <Font size="16.0"/>
+                </font>
+                <opaqueInsets>
+                    <Insets/>
+                </opaqueInsets>
+                <cursor>
+                    <Cursor fx:constant="DEFAULT"/>
+                </cursor>
+            </Button>
+            <Button minHeight="-Infinity" mnemonicParsing="false" onAction="#AExit" prefHeight="50.0"
+                    prefWidth="200.0" text="Salir">
+                <VBox.margin>
+                    <Insets right="5.0" top="255.0"/>
+                </VBox.margin>
+                <font>
+                    <Font size="18.0"/>
+                </font>
+                <cursor>
+                    <Cursor fx:constant="DEFAULT"/>
+                </cursor>
+            </Button>
+        </VBox>
+    </left>
+    <center>
+        <TabPane fx:id="tabPanel" prefHeight="461.0" prefWidth="450.0" styleClass="tab" stylesheets="@../css/Main.css"
+                 tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+            <Tab>
+                <VBox alignment="TOP_CENTER">
+                    <Label text="Hola">
+                        <font>
+                            <Font name="Arial" size="62.0"/>
+                        </font>
+                        <VBox.margin>
+                            <Insets top="80.0"/>
+                        </VBox.margin>
+                    </Label>
+                </VBox>
+            </Tab>
+            <Tab>
+                <fx:include source="Departments.fxml"/>
+            </Tab>
+            <Tab>
+                <fx:include source="Employees.fxml"/>
+            </Tab>
+            <Tab>
+                <fx:include source="Titles.fxml"/>
+            </Tab>
+            <Tab>
+                <fx:include source="Salaries.fxml"/>
+            </Tab>
+            <Tab>
+                <fx:include source="DeptManagers.fxml"/>
+            </Tab>
+            <Tab>
+                <fx:include source="DeptEmployees.fxml"/>
+            </Tab>
+        </TabPane>
+    </center>
+</BorderPane>
