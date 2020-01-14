@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.io.IOException;
-//TODO limpiar codigo, probar y terminar :D
+
 public class Main extends Application {
 
     public static void main(String[] args) {
